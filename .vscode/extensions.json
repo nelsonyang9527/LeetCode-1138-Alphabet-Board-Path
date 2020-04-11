@@ -1,0 +1,8 @@
+{
+    // VS Code 建議安裝擴充工具清單 for Source4 
+    "recommendations": [
+        "hookyqr.beautify",
+        "davidanson.vscode-markdownlint",
+        "dbaeumer.vscode-eslint"
+    ]
+}
