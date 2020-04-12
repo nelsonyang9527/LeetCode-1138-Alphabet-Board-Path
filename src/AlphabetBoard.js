@@ -10,7 +10,7 @@ class AlphabetBoard {
      * @memberof AlphabetBoard
      */
   constructor (boardArray) {
-    // 字母板資料
+    // 字母板資料集合
     this.boardArray = boardArray
   }
 
