@@ -10,7 +10,7 @@
             "request": "launch",
             // 執行程式根目錄
             "cwd": "${workspaceFolder}",
-            "program": "${workspaceFolder}/app.js"
+            "program": "${workspaceFolder}/src/app.js"
         }
     ]
 }
