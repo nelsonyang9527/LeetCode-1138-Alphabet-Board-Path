@@ -1,5 +1,5 @@
 # LeetCode-1138-Alphabet-Board-Path
-字母板上的路徑
+字母板上的路徑, Leetcode assignment:
 https://leetcode.com/problems/alphabet-board-path/
 
 ## Question
