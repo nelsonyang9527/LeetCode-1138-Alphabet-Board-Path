@@ -1,5 +1,6 @@
 # LeetCode-1138-Alphabet-Board-Path
 字母板上的路徑
+https://leetcode.com/problems/alphabet-board-path/
 
 ## Question
 
@@ -41,3 +42,8 @@ Constraints:
 
 ## Solution
 
+Testing
+```
+cd /src/
+node app.js
+```
