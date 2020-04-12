@@ -49,7 +49,8 @@ class AlphabetBoard {
       // 取得 字母移動方向
       const charMoveOfX = this.getCharMove(currentX, previouX, 'x')
       const charMoveOfY = this.getCharMove(currentY, previouY, 'y')
-      // 座標若沒位移
+
+      // 座標若沒位移, 則加入「!」, 反之累加字母移動方向
       if (charMoveOfX === '' && charMoveOfY === '') {
         result += '!'
       } else {
@@ -102,14 +103,15 @@ class AlphabetBoard {
   /**
    * 取得 字母在字母板上的座標
    *
-   * @param {string} char 字母
+   * @param {string} char 目標字母
    * @param {string} position 座標方位 (X軸: x;Y軸: y)
    * @returns {number} 座標
    */
   getCharPosition (char, position) {
     for (var y = 0; y < this.boardArray.length; y++) {
-      // 字母板 i 列拆解 char 陣列
+      // 字母板 x 列拆解 char 陣列
       const boardCharArray = Object.assign([], this.boardArray[y])
+      // 尋找 x列是否有目標字母
       const x = boardCharArray.indexOf(char)
       if (x >= 0) {
         switch (position) {
