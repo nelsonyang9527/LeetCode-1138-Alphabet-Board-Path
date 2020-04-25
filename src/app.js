@@ -25,12 +25,12 @@ function alphabetBoardPath (target) {
 
   for (var i = 0; i <= target.length - 1; i++) {
     // 當前字母座標
-    const currentX = alphabetPoints[target[i]].x
-    const currentY = alphabetPoints[target[i]].y
+    const currentX = Math.abs(alphabetPoints[target[i]].x)
+    const currentY = Math.abs(alphabetPoints[target[i]].y)
 
     // 前一個字母座標
-    const previouX = (i - 1) > 0 ? alphabetPoints[target[i - 1]].x : 0
-    const previouY = (i - 1) > 0 ? alphabetPoints[target[i - 1]].y : 0
+    const previouX = (i - 1) >= 0 ? Math.abs(alphabetPoints[target[i - 1]].x) : 0
+    const previouY = (i - 1) >= 0 ? Math.abs(alphabetPoints[target[i - 1]].y) : 0
 
     // 座標相差
     const offsetX = currentX - previouX
@@ -43,9 +43,9 @@ function alphabetBoardPath (target) {
     const charMoveY = (offsetY > 0 ? 'D' : 'U').repeat(Math.abs(offsetY))
 
     // 遇到「Z」字母要顛倒路徑
-    const movePath = (charMoveX && currentX === 0 && currentY === 5)
-      ? charMoveY + charMoveX
-      : charMoveX + charMoveY
+    const movePath = (currentX === 0 && currentY === 5)
+      ? charMoveX + charMoveY
+      : charMoveY + charMoveX
 
     result += movePath + '!'
   }
@@ -53,11 +53,4 @@ function alphabetBoardPath (target) {
   return result
 }
 
-console.log('Input: leet  DDR!UURRR!!DDD!')
-console.log(`Output: ${alphabetBoardPath('leet')}`)
-
-console.log('Input: code  RR!DDRR!UUL!R!')
-console.log(`Output: ${alphabetBoardPath('code')}`)
-
-console.log('Input: ayz  !DDDDRRRR!LLLLD!')
-console.log(`Output: ${alphabetBoardPath('ayz')}`)
+console.log(`Input: leet\nOutput: ${alphabetBoardPath('leet')}`)

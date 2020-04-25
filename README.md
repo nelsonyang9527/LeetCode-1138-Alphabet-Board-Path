@@ -47,3 +47,15 @@ Testing
 cd /src/
 node app.js
 ```
+
+Result
+```
+Input: leet
+Output: DDR!UURRR!!DDD!
+Input: code
+Output: RR!DDRR!UUL!R!
+Input: aaa
+Output: !!!
+Input: ayz
+Output: DDDDRRRR!LLLLD!URRRR!LLLLD!
+```
